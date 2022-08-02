@@ -1,50 +1,50 @@
 {
   "project": {
-    "packageName": "net.maku",
+    "packageName": "cn.ennova.ctu.map.manage",
     "version": "1.0.0",
-    "backendPath": "D:\\generator\\fast-boot\\fast-server",
-    "frontendPath": "D:\\generator\\fast-admin"
+    "backendPath": "D:\\enn\\fast-generator",
+    "frontendPath": "D:\\enn\\fast-generator-server\\fast-admin"
   },
   "developer": {
-    "author": "阿沐",
-    "email": "babamu@126.com"
+    "author": "JP Morgan",
+    "email": "Morgan@126.com"
   },
   "templates": [
     {
       "templateName": "Controller.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/controller/${subModuleName!}/${ClassName}Controller.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}Controller.java"
     },
     {
       "templateName": "Service.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/service/${subModuleName!}/${ClassName}Service.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}Service.java"
     },
     {
       "templateName": "ServiceImpl.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/service/impl/${subModuleName!}/${ClassName}ServiceImpl.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/impl/${subModuleName!}/${ClassName}ServiceImpl.java"
     },
     {
       "templateName": "Query.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/query/${subModuleName!}/${ClassName}Query.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}Query.java"
     },
     {
       "templateName": "Entity.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/entity/${subModuleName!}/${ClassName}Entity.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}.java"
     },
     {
       "templateName": "VO.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/vo/${subModuleName!}/${ClassName}VO.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}VO.java"
     },
     {
       "templateName": "Convert.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/convert/${subModuleName!}/${ClassName}Convert.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}Convert.java"
     },
     {
       "templateName": "Dao.java.ftl",
-      "generatorPath": "${backendPath}/src/main/java/${packagePath}/${moduleName!}/dao/${subModuleName!}/${ClassName}Dao.java"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}Mapper.java"
     },
     {
       "templateName": "Dao.xml.ftl",
-      "generatorPath": "${backendPath}/src/main/resources/mapper/${moduleName!}/${ClassName}Dao.xml"
+      "generatorPath": "${backendPath}/${moduleName!}/src/main/java/${packagePath}/${subModuleName!}/${ClassName}Mapper.xml"
     },
     {
       "templateName": "mysql.sql.ftl",

@@ -24,38 +24,41 @@ import java.util.List;
  */
 @Slf4j
 @Component
-@DubboService(version = "1.0.0", protocol = {"dubbo"})
-public class ${ClassName}ServiceImpl extends BaseServiceImpl<${ClassName}, ${ClassName}> implements ${ClassName}Service {
+public class ${ClassName}Handle {
 
     @Resource
     ${ClassName}Mapper ${className}Mapper;
 
     @Override
     public ResultDto<PageResultDto<${ClassName}Dto>> page(${ClassName}Query query) {
-        return ${className}Mapper.page(query,manager);
+        return ${className}Handle.page(query,manager);
     }
 
+    private QueryWrapper<${ClassName}> getWrapper(${ClassName}Query query){
+        QueryWrapper<${ClassName}> wrapper = new QueryWrapper<>();
+        return wrapper;
+    }
 
     @Override
     public ResultDto<String> save(${ClassName}Dto dto) {
         ${ClassName}Entity entity = ${ClassName}Convert.INSTANCE.convert(dto);
-        return ${className}Mapper.save(query,manager);
+        return ${className}Handle.save(query,manager);
     }
 
     @Override
-    public ResultDto<String> getById(Long id) {
-        return ${className}Mapper.getById(id);
+    public ResultDto<String> getById(${ClassName}Dto dto) {
+        return ${className}Handle.getById(query,manager);
     }
 
     @Override
     public ResultDto<String> update(${ClassName}Dto dto) {
         ${ClassName}Entity entity = ${ClassName}Convert.INSTANCE.convert(dto);
-       return ${className}Mapper.save(query,manager);
+       return ${className}Handle.save(query,manager);
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
     public ResultDto<String> delete(List<Long> idList) {
-        return ${className}Mapper.delete(query,manager);
+        return ${className}Handle.delete(query,manager);
     }
 }

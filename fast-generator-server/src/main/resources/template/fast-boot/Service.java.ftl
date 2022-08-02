@@ -10,17 +10,14 @@ import java.util.List;
 
 /**
  * ${tableComment}
- *
  * @author ${author} ${email}
  * @since ${version} ${date}
  */
-public interface ${ClassName}Service extends BaseService<${ClassName}Entity> {
+public interface ${ClassName}Service extends BaseService<${ClassName}> {
 
-    PageResult<${ClassName}VO> page(${ClassName}Query query);
-
-    void save(${ClassName}VO vo);
-
-    void update(${ClassName}VO vo);
-
-    void delete(List<Long> idList);
+    ResultDto<PageResultDto<${ClassName}Dto>> page(${ClassName}Query query);
+    ResultDto<<${ClassName}Dto>> getById(Long id);
+    ResultDto<String> save(${ClassName}Dto dto);
+    ResultDto<String> update(${ClassName}Dto dto);
+    ResultDto<String> delete(List<Long> idList);
 }

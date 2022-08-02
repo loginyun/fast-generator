@@ -1,6 +1,6 @@
 package ${package}<#if moduleName??>.${moduleName}</#if>.vo<#if subModuleName??>.${subModuleName}</#if>;
 
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import java.io.Serializable;
@@ -16,13 +16,13 @@ import ${i!};
 * @since ${version} ${date}
 */
 @Data
-@Schema(description = "${tableComment}")
-public class ${ClassName}VO implements Serializable {
+@ApiModel((description = "${tableComment}")
+public class ${ClassName}Dto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 <#list columnList as column>
 	<#if column.columnComment!?length gt 0>
-	@Schema(description = "${column.columnComment}")
+	@ApiModelProperty(value = "${column.columnComment}",example = "${column.columnComment}")
 	</#if>
 	<#if column.attrType == 'Date'>
 	@JsonFormat(pattern = DateUtils.DATE_TIME_PATTERN)

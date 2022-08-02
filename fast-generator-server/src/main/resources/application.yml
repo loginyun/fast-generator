@@ -6,11 +6,10 @@ spring:
     active: dev
   datasource:
     druid:
+      url: jdbc:mysql://127.0.0.1:3306/user-center?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123123
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/fast_generator?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
-      username: fast
-      password: 123456
-
 
 # 需要指定对应的模板
 fast:

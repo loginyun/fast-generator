@@ -17,9 +17,8 @@ import ${baseClassEntity.packageName};
  * @since ${version} ${date}
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
 @TableName("${tableName}")
-public class ${ClassName}Entity<#if baseClassEntity??> extends ${baseClassEntity.code}</#if> {
+public class ${ClassName}<#if baseClassEntity??> extends ${baseClassEntity.code}</#if> {
 <#list columnList as column>
 	<#if baseClassEntity?? && baseClassEntity.fields?split(",")?seq_contains(column.columnName)>
     <#else>
@@ -38,7 +37,7 @@ public class ${ClassName}Entity<#if baseClassEntity??> extends ${baseClassEntity
 	@TableField(fill = FieldFill.INSERT_UPDATE)
 	</#if>
     <#if column.pk>
-	@TableId
+	@TableId(type = IdType.AUTO)
 	</#if>
 	private ${column.attrType} ${column.attrName};
 
